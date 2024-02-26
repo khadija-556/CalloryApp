@@ -1,0 +1,21 @@
+{% extends 'home.html' %}
+
+{% block content %}
+
+<h1>Callory calculation</h1>
+
+
+<p class="container">
+    <form action="" method="POST">
+        {% csrf_token %}
+        <input type="date" name="Date">
+        <button type="submit">Submit</button>
+    </form> 
+    <br>
+    Total BMR:{{bmr}} <br>
+    Consumed Callory: {{sum}} <br>
+    Need To Consumed :{{needCal}}
+
+</p>
+
+{% endblock %}
